@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "muebles-6c6e2": {
+      "hosting": {
+        "muebles": [
+          "muebles-6c6e2"
+        ]
+      }
+    }
+  }
+}
