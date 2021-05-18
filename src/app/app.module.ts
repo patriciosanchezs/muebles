@@ -22,7 +22,6 @@ import { ListaProveedorComponent } from './components/proveedores/lista-proveedo
     ProveedoresComponent,
     AgregarProveedorComponent,
     ListaProveedorComponent,
-    ToastrModule
   ],
   imports: [
     BrowserModule,
@@ -30,7 +29,8 @@ import { ListaProveedorComponent } from './components/proveedores/lista-proveedo
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
     
   ],
   providers: [],

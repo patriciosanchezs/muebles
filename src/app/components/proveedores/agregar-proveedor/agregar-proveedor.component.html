@@ -1,5 +1,9 @@
 <div class="mt-5">
-    <h5 class="titulo mb-3">{{ titulo | uppercase }}</h5>
+    <h5 class="titulo mb-3">{{ titulo | uppercase }}
+        <div *ngIf="loading" class="spinner-border text-primary float-end" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </h5>
     <form [formGroup]="form" (ngSubmit)="agregarProveedor()">
         <div class="form-group mb-3">
             <label for="nombre">Nombre</label>
@@ -9,9 +13,9 @@
             <div class="col-lg-6">
                 <div class="form-group mb-3">
                     <label for="region">Región</label>
-                    <select class="form-control" id="region" formControlName="region" aria-placeholder="Seleccionar...">
+                    <select class="form-control" id="region" formControlName="region" (change)="cargarComuna()" aria-placeholder="Seleccionar...">
                         <option disabled selected>Seleccionar...</option>
-                        <option value="stgo">METROPOLITANA</option>
+                        <option *ngFor="let region of listRegiones" [value]="region">{{ region }}</option>
                     </select>
                 </div>
             </div>
@@ -20,8 +24,7 @@
                     <label for="comuna">Comuna</label>
                     <select class="form-control" id="comuna" formControlName="comuna" aria-placeholder="Seleccionar...">
                         <option disabled selected>Seleccionar...</option>
-                        <option>MACÚL</option>
-                        <option>SANTIAGO CENTRO</option>
+                        <option *ngFor="let comuna of listComunas[0]" [value]="comuna">{{ comuna }}</option>
                     </select>
                 </div>
             </div>
@@ -31,7 +34,7 @@
             <input type="text" class="form-control" formControlName="direccion" id="nombre" placeholder="">
         </div>
         <div class="col-lg-12">
-            <button class="btn btn-primary btn-block" type="submit" >AGREGAR</button>
+            <button class="btn btn-primary btn-block" type="submit">AGREGAR</button>
         </div>
     </form>
 </div>

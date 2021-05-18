@@ -10,12 +10,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Fab. Muebles Ariel Soto</td>
-                        <td>Santiago</td>
+                    <tr *ngFor="let proveedor of listProveedores">
+                        <td>{{ proveedor.nombre }}</td>
+                        <td>{{ proveedor.direccion }}</td>
                         <td class="">
                             <i class="far fa-edit text-info"></i>
-                            <i class="fas fa-trash-alt text-danger"></i>
+                            <i (click)="eliminarProveedor(proveedor.id)" class="fas fa-trash-alt text-danger"></i>
                         </td>
                     </tr>
                 </tbody>
