@@ -10,6 +10,10 @@ export class RegionComunasService {
   constructor() {
       this.listRegionComunas = [
         {
+          "region": "Seleccionar...",
+          "comuna": "Seleccionar..."
+        },
+        {
           "region": "Arica y Parinacota",
           "numero": "XV",
           "comunas": [

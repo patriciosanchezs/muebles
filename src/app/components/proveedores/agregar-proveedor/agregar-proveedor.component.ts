@@ -61,4 +61,8 @@ export class AgregarProveedorComponent implements OnInit {
     console.log(this.listComunas);
   }
 
+  resetearFormulario(): void {
+    this.form.reset();
+  }
+
 }

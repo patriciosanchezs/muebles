@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 import { AgregarProveedorComponent } from './components/proveedores/agregar-proveedor/agregar-proveedor.component';
 import { ListaProveedorComponent } from './components/proveedores/lista-proveedor/lista-proveedor.component';
+import { VentasComponent } from './components/ventas/ventas.component';
+import { AgregarVentaComponent } from './components/ventas/agregar-venta/agregar-venta.component';
+import { ListarVentasComponent } from './components/ventas/listar-ventas/listar-ventas.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { ListaProveedorComponent } from './components/proveedores/lista-proveedo
     ProveedoresComponent,
     AgregarProveedorComponent,
     ListaProveedorComponent,
+    VentasComponent,
+    AgregarVentaComponent,
+    ListarVentasComponent,
   ],
   imports: [
     BrowserModule,
